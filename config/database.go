@@ -46,7 +46,7 @@ sqlDB.SetMaxIdleConns(10) // Maksimal 10 koneksi idle
 // GORM akan buat tabel jika belum ada
 err = DB.AutoMigrate(
 &models.User{},
-//models.Product{},
+&models.Product{},
 )
 if err != nil {
 log.Fatalf("AutoMigrate gagal: %v", err)
